@@ -1,5 +1,5 @@
 import App from "@/App";
-import AdminLayout from "@/components/layout/AdminLayout";
+import DashboardLayout from "@/components/layout/DashboardLayout";
 import About from "@/pages/About";
 import Page1 from "@/pages/Dashboard/Page1";
 import Page2 from "@/pages/Dashboard/Page2";
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/admin",
-    element: <AdminLayout />,
+    path: "/dashboard",
+    element: <DashboardLayout />,
     children: [
       {
         index: true,
