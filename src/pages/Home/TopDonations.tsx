@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TopDonations = () => {
   return (
     <section className="">
-      <Title title="top donations" />
+      <Title title="top donations" left={true} />
       <div className="grid grid-cols-3 gap-4 justify-items-center">
         <Card />
         <Card />
