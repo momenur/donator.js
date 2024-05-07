@@ -3,7 +3,7 @@ import AdminLayout from "@/components/layout/AdminLayout";
 import About from "@/pages/About";
 import Page1 from "@/pages/Dashboard/Page1";
 import Page2 from "@/pages/Dashboard/Page2";
-import Home from "@/pages/Home";
+import Home from "@/pages/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "about",
+        path: "donations",
         element: <About />,
       },
     ],

@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
@@ -71,7 +71,16 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        // "primary-gradient": "linear-gradient(45deg, #07EBFE, #4EADFE)",
+        "primary-gradient": "linear-gradient(45deg, #EF6524, #9A3412)",
+        "secondary-gradient": "linear-gradient(45deg, #EF6524, #9A3412)",
+        "banner-gradient": "url('src/assets/images/banner.jpg')",
+      },
+      textColor: {
+        "color-text": "#EF6524",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
