@@ -32,7 +32,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section className="px-10 mb-24">
+    <section className="px-10">
       <Title title="Donations Gallery" />
       <Carousel className="w-full max-w-full">
         <CarouselContent>
@@ -41,7 +41,7 @@ const Gallery = () => {
               <div className="grid grid-cols-3 p-1 justify-items-center">
                 <div>
                   <img
-                    className="rounded-md size-80 border-orange-500 hover:border-[2px] transition-all"
+                    className="rounded-e-full size-80 border-orange-500 hover:border-[2px] transition-all"
                     src={images[index++]}
                     alt=""
                   />
@@ -59,7 +59,7 @@ const Gallery = () => {
 
                 <div>
                   <img
-                    className="rounded-md size-80 border-orange-500 hover:border-[2px] transition-all"
+                    className="rounded-s-full size-80 border-orange-500 hover:border-[2px] transition-all"
                     src={images[index++]}
                     alt=""
                   />
