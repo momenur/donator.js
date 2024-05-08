@@ -26,32 +26,45 @@ const images = [
   image4,
   image5,
   image6,
+  image2,
+  image3,
 ];
 
 const Gallery = () => {
   return (
-    <section className="px-10">
+    <section className="px-10 mb-24">
       <Title title="Donations Gallery" />
       <Carousel className="w-full max-w-full">
         <CarouselContent>
           {images.map((_, index) => (
             <CarouselItem key={index}>
               <div className="grid grid-cols-3 p-1 justify-items-center">
-                <img
-                  className="rounded-md size-80 border-orange-500 border-[2px]"
-                  src={images[index++]}
-                  alt=""
-                />
-                <img
-                  className="rounded-md size-80 border-orange-500 border-[3px]"
-                  src={images[index++]}
-                  alt=""
-                />
-                <img
-                  className="rounded-md size-80 border-orange-500 border-[3px]"
-                  src={images[index++]}
-                  alt=""
-                />
+                <div>
+                  <img
+                    className="rounded-md size-80 border-orange-500 hover:border-[2px] transition-all"
+                    src={images[index++]}
+                    alt=""
+                  />
+                  <p>Food Donation</p>
+                </div>
+
+                <div>
+                  <img
+                    className="rounded-md size-80 border-orange-500 hover:border-[2px] transition-all"
+                    src={images[index++]}
+                    alt=""
+                  />
+                  <p>Medicine Donation</p>
+                </div>
+
+                <div>
+                  <img
+                    className="rounded-md size-80 border-orange-500 hover:border-[2px] transition-all"
+                    src={images[index++]}
+                    alt=""
+                  />
+                  <p>Cloth Donation</p>
+                </div>
               </div>
             </CarouselItem>
           ))}
