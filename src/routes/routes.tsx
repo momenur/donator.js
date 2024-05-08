@@ -5,6 +5,7 @@ import CreateDonation from "@/pages/Dashboard/CreateDonation";
 import Dashboard from "@/pages/Dashboard/Dashboard";
 import Donations from "@/pages/Donations/Donations";
 import Home from "@/pages/Home/Home";
+import Login from "@/pages/Login/Login";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "donations",
         element: <Donations />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },

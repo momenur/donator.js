@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link to="/dashboard">Dashboard</Link>
           </li>
           <li>
-            <Link to="/donations">
+            <Link to="/login">
               <Button className="mb-1 text-lg rounded-full bg-secondary-gradient">
                 Login
               </Button>
