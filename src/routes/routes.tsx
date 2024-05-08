@@ -1,8 +1,9 @@
 import App from "@/App";
 import DashboardLayout from "@/components/layout/DashboardLayout";
-import About from "@/pages/About";
-import Page1 from "@/pages/Dashboard/Page1";
-import Page2 from "@/pages/Dashboard/Page2";
+import AllDonations from "@/pages/Dashboard/AllDonations";
+import CreateDonation from "@/pages/Dashboard/CreateDonation";
+import Dashboard from "@/pages/Dashboard/Dashboard";
+import Donations from "@/pages/Donations/Donations";
 import Home from "@/pages/Home/Home";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
       },
       {
         path: "donations",
-        element: <About />,
+        element: <Donations />,
       },
     ],
   },
@@ -28,11 +29,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Page1 />,
+        element: <Dashboard />,
       },
       {
-        path: "page2",
-        element: <Page2 />,
+        path: "donations",
+        element: <AllDonations />,
+      },
+      {
+        path: "create-donation",
+        element: <CreateDonation />,
       },
     ],
   },

@@ -1,10 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Container from "../ui/Container";
+import Sidebar from "./Sidebar";
 
 const DashboardLayout = () => {
   return (
-    <div>
-      <Outlet />
-    </div>
+    <Container>
+      <div className="flex">
+        <Sidebar />
+        <Outlet />
+      </div>
+    </Container>
   );
 };
 

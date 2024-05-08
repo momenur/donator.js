@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const Footer = () => {
   return (
-    <footer className=" h-[100px] bg-secondary-gradient pt-[0.5px] pb-[1px] my-2">
+    <footer className=" h-[100px] bg-secondary-gradient pt-[0.5px] pb-[1px] my-2 max-w-7xl mx-auto">
       <div className="flex items-center justify-between h-full px-2 bg-white">
         <div className="flex items-center ">
           <img className="size-14" src={logo} alt="logo" />
