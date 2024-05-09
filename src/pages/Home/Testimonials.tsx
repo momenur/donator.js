@@ -1,3 +1,4 @@
+import Container from "@/components/ui/Container";
 import Title from "@/components/ui/Title";
 import {
   Carousel,
@@ -37,27 +38,29 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="px-32 mb-32">
-      <Title title="Donor Testimonials" left={true} />
-      <Carousel className="w-full max-w-full px-16">
-        <CarouselContent>
-          {testimonials.map((item, index) => (
-            <CarouselItem key={index}>
-              <div className="flex items-center justify-center gap-6 mb-10">
-                <p className="flex gap-1 text-4xl text-color-text">
-                  <FaSlackHash />
-                  <FaSlackHash />
-                </p>
-                <p className="text-3xl font-bold text-center">{item.name}</p>
-              </div>
-              <p className="text-justify">{item.testimonial}</p>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <Container>
+      <div className="mb-32 md:px-32">
+        <Title title="Donor Testimonials" left={true} />
+        <Carousel className="w-full max-w-xs mx-auto md:max-w-full md:px-16">
+          <CarouselContent>
+            {testimonials.map((_, index) => (
+              <CarouselItem key={index}>
+                <div className="flex items-center justify-center gap-6 p-1 mb-10">
+                  <p className="flex gap-1 md:text-4xl text-color-text">
+                    <FaSlackHash />
+                    <FaSlackHash />
+                  </p>
+                  <p className="font-bold text-center md:text-3xl">{_.name}</p>
+                </div>
+                <p className="text-justify ">{_.testimonial}</p>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+    </Container>
   );
 };
 

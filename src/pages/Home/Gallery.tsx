@@ -32,16 +32,16 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section className="px-10">
+    <section className="px-16">
       <Title title="Donations Gallery" />
       <Carousel className="w-full max-w-full">
         <CarouselContent>
           {images.map((_, index) => (
             <CarouselItem key={index}>
-              <div className="grid grid-cols-3 p-1 justify-items-center">
+              <div className="grid p-1 grid-col-1 md:grid-cols-3 justify-items-center">
                 <div>
                   <img
-                    className="rounded-e-full size-80 border-orange-500 hover:border-[2px] transition-all"
+                    className="md:rounded-e-full size-80 border-orange-500 hover:border-[2px] transition-all"
                     src={images[index++]}
                     alt=""
                   />
@@ -59,18 +59,18 @@ const Gallery = () => {
 
                 <div>
                   <img
-                    className="rounded-s-full size-80 border-orange-500 hover:border-[2px] transition-all"
+                    className="md:rounded-s-full size-80 border-orange-500 hover:border-[2px] transition-all hidden md:block"
                     src={images[index++]}
                     alt=""
                   />
-                  <p>Cloth Donation</p>
+                  <p className="hidden md:block">Cloth Donation</p>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="text-white bg-secondary-gradient size-12" />
-        <CarouselNext className="text-white bg-secondary-gradient size-12" />
+        <CarouselPrevious className="text-white bg-secondary-gradient size-8 md:size-12" />
+        <CarouselNext className="text-white bg-secondary-gradient size-8 md:size-12" />
       </Carousel>
     </section>
   );

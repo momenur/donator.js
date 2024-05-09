@@ -4,8 +4,8 @@ import { Button } from "../ui/button";
 
 const Footer = () => {
   return (
-    <footer className=" h-[100px] bg-secondary-gradient pt-[0.5px] pb-[1px] my-2 max-w-7xl mx-auto">
-      <div className="flex items-center justify-between h-full px-2 bg-white">
+    <footer className="h-full md:h-[100px] bg-secondary-gradient pt-[0.5px] pb-[1px] my-2 max-w-7xl mx-auto">
+      <div className="flex flex-col items-center justify-between h-full gap-4 px-2 bg-white md:flex-row">
         <div className="flex items-center ">
           <img className="size-14" src={logo} alt="logo" />
           <h2 className="text-3xl font-semibold text-color-text ">
@@ -15,7 +15,7 @@ const Footer = () => {
 
         <p>© donator.JS 2024</p>
 
-        <form className="flex items-center text-black">
+        <form className="items-center text-black md:flex">
           <input
             className="px-4 h-[40px] text-sm font-semibold border-2 border-e-0 border-orange-500 rounded-s-full focus:bg-gray-200 focus:border-2 focus:outline-none focus:border-e-0"
             type="email"

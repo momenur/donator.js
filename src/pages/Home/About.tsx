@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="">
       <Title title="Let's Know Us" left={true} />
-      <div className="flex items-center justify-between gap-16 px-6 py-10 text-white bg-black rounded-md ">
+      <div className="items-center justify-between gap-16 px-6 py-10 text-white bg-black rounded-md md:flex ">
         <div>
           <img className="rounded-e-full" src={aboutImage} alt="About Images" />
         </div>
@@ -40,16 +40,22 @@ const About = () => {
           </div>
           <div className="flex gap-6 ">
             <div className="flex flex-col items-center justify-center pt-4 mt-4 border-e-2 pe-4">
-              <h1 className="text-4xl font-semibold text-color-text">3k+ </h1>
-              <h1 className="text-4xl">Blood</h1>
+              <h1 className="text-2xl font-semibold md:text-4xl text-color-text">
+                3k+{" "}
+              </h1>
+              <h1 className="text-2xl md:text-4xl">Blood</h1>
             </div>
             <div className="flex flex-col items-center justify-center pt-4 mt-4 border-e-2 pe-4">
-              <h1 className="text-4xl font-semibold text-color-text">30k+ </h1>
-              <h1 className="text-4xl">Dress</h1>
+              <h1 className="text-2xl font-semibold md:text-4xl text-color-text">
+                30k+{" "}
+              </h1>
+              <h1 className="text-2xl md:text-4xl">Dress</h1>
             </div>
             <div className="flex flex-col items-center justify-center pt-4 mt-4">
-              <h1 className="text-4xl font-semibold text-color-text">550k+ </h1>
-              <h1 className="text-4xl">Food</h1>
+              <h1 className="text-2xl font-semibold md:text-4xl text-color-text">
+                550k+{" "}
+              </h1>
+              <h1 className="text-2xl md:text-4xl">Food</h1>
             </div>
           </div>
         </div>
