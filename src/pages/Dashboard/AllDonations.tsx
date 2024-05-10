@@ -5,6 +5,15 @@ import { Button } from "@/components/ui/button";
 import { useGetDonationsQuery } from "@/redux/api/api";
 import { Link } from "react-router-dom";
 
+// type TDonation = {
+//   id: string;
+//   title: string;
+//   image: string;
+//   category: string;
+//   amount: string;
+//   description: string;
+// };
+
 const AllDonations = () => {
   const { data: donations, isLoading } = useGetDonationsQuery(undefined);
   if (isLoading) {
@@ -19,7 +28,11 @@ const AllDonations = () => {
         <TableTitle />
         <div>
           {donations?.map((item) => (
-            <TableRow donation={item} />
+            <TableRow
+              title={item.title}
+              category={item.category}
+              amount={item.amount}
+            />
           ))}
         </div>
       </div>
