@@ -2,8 +2,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const baseApi = createApi({
   reducerPath: "baseApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api/v1" }),
-  tagTypes: ["donation"],
+  baseQuery: fetchBaseQuery({
+    baseUrl:
+      "https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1",
+  }),
+  tagTypes: ["donation", "update"],
   endpoints: (builder) => ({
     // GET all Donations
     getDonations: builder.query({
@@ -11,7 +14,7 @@ export const baseApi = createApi({
         url: "/donations",
         method: "GET",
       }),
-      providesTags: ["donation"],
+      providesTags: ["donation", "update"],
     }),
 
     // GET Single Donation
@@ -32,7 +35,7 @@ export const baseApi = createApi({
           body: data.data,
         };
       },
-      invalidatesTags: ["donation"],
+      invalidatesTags: ["update"],
     }),
 
     addDonations: builder.mutation({

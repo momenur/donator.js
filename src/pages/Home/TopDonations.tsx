@@ -14,7 +14,7 @@ const TopDonations = () => {
     <section className="">
       <Title title="top donations" left={true} />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 justify-items-center">
-        {donations.map((item) => (
+        {donations.slice(0, 6).map((item) => (
           <Card donation={item} />
         ))}
       </div>

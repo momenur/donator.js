@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useUpdateDonationsMutation } from "@/redux/api/api";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 type TFormInput = {
   image: string;
@@ -14,6 +15,7 @@ type TFormInput = {
 };
 
 const EditDonation = () => {
+  const navigate = useNavigate();
   const currentUrl = window.location.href;
   const urlObject = new URL(currentUrl);
   const pathname = urlObject.pathname;
@@ -21,7 +23,7 @@ const EditDonation = () => {
   const lastId = parts[parts.length - 1];
   console.log(lastId);
 
-  const [updateDonation, { data, isLoading: isUpdating }] =
+  const [updateDonation, { data, isLoading, isSuccess }] =
     useUpdateDonationsMutation();
   const {
     register,
@@ -29,13 +31,14 @@ const EditDonation = () => {
     formState: { errors },
   } = useForm<TFormInput>();
 
-  const onSubmit: SubmitHandler<TFormInput> = (data) => {
+  const onSubmit: SubmitHandler<TFormInput> = async (data) => {
     const updateData = {
       id: lastId,
       data,
     };
     console.log(updateData);
-    updateDonation(updateData);
+    const res = await updateDonation(updateData);
+    location.reload();
   };
 
   return (

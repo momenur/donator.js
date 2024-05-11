@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <section className="bg-secondary-gradient md:max-w-[300px] max-w-[50px] md:min-w-[180px] h-screen text-white font-semibold px-4 pt-10 fixed z-50 start-0 ">
+    <section className="bg-secondary-gradient md:max-w-[300px] max-w-[50px] md:min-w-[180px] h-screen text-white font-semibold px-4 pt-10  fixed start-0 ">
       <ul className="flex flex-col gap-3">
         <Link to="/">
           <li className="flex items-center gap-2 truncate">

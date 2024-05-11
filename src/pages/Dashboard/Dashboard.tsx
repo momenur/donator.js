@@ -20,7 +20,7 @@ const Dashboard = () => {
             <h4 className="flex-1">Medicine</h4>
             <h4 className="flex-1">Food</h4>
           </div>
-          <div className="flex justify-between w-full px-3 py-3 text-xs md:py-6 md:px-10 md:text-xl bg-secondary-gradient rounded-b-md">
+          <div className="flex justify-between w-full px-3 py-3 text-xs text-white md:py-6 md:px-10 md:text-xl bg-secondary-gradient rounded-b-md">
             <h4 className="flex-1 truncate">3K+ Dress</h4>
             <h4 className="flex-1 truncate">30K+ Blood</h4>
             <h4 className="flex-1 truncate">50k+ Medicine</h4>
