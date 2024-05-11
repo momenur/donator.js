@@ -1,6 +1,7 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "./button";
 import { useAddDonationsMutation } from "@/redux/api/api";
+import Swal from "sweetalert2";
 
 type TFormInput = {
   image: string;
@@ -11,7 +12,8 @@ type TFormInput = {
 };
 
 const FormComponent = () => {
-  const [addDonation, { data, isLoading }] = useAddDonationsMutation();
+  const [addDonation, { data, isLoading, isSuccess }] =
+    useAddDonationsMutation();
   console.log(data, isLoading);
   const {
     register,
@@ -24,6 +26,16 @@ const FormComponent = () => {
     addDonation(data);
   };
 
+  if (isSuccess) {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Your Donation Post is Added",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  }
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -33,7 +45,7 @@ const FormComponent = () => {
         Please full fill all requirement.
       </h1>
       <div className="flex flex-col gap-6">
-        <div className="flex w-full gap-10">
+        <div className="flex flex-col w-full gap-4 md:flex-row md:gap-10">
           <div className="w-full">
             <label className="block" htmlFor="image">
               Image URL
@@ -70,7 +82,7 @@ const FormComponent = () => {
             )}
           </div>
         </div>
-        <div className="flex w-full gap-10">
+        <div className="flex flex-col w-full gap-4 md:flex-row md:gap-10">
           <div className="w-full">
             <label className="block" htmlFor="title">
               Donation Title
@@ -107,7 +119,7 @@ const FormComponent = () => {
             )}
           </div>
         </div>
-        <div className="flex items-end justify-end w-full gap-10">
+        <div className="flex flex-col items-end justify-end w-full gap-4 md:flex-row md:gap-10">
           <div className="w-full">
             <label className="block" htmlFor="description">
               Description

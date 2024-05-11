@@ -15,19 +15,10 @@ type TFormInput = {
 
 const EditDonation = () => {
   const currentUrl = window.location.href;
-
-  // Create a URL object
   const urlObject = new URL(currentUrl);
-
-  // Get the pathname which contains the id
   const pathname = urlObject.pathname;
-
-  // Split the pathname by '/'
   const parts = pathname.split("/");
-
-  // Get the last part which is the id
   const lastId = parts[parts.length - 1];
-
   console.log(lastId);
 
   const [updateDonation, { data, isLoading: isUpdating }] =

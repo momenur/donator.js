@@ -20,7 +20,7 @@ const AllDonations = () => {
     return <p>Loading...</p>;
   }
   return (
-    <section className="w-full">
+    <section className="w-full ps-10">
       <div className="flex items-center justify-center -mt-20">
         <Title title="All Donations" />
       </div>

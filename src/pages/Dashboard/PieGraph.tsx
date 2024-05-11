@@ -35,7 +35,7 @@ const PieGraph = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <PieChart width={350} height={230}>
         <Pie
           data={data}

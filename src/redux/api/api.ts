@@ -5,9 +5,19 @@ export const baseApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:5000/api/v1" }),
   tagTypes: ["donation"],
   endpoints: (builder) => ({
+    // GET all Donations
     getDonations: builder.query({
       query: () => ({
         url: "/donations",
+        method: "GET",
+      }),
+      providesTags: ["donation"],
+    }),
+
+    // GET Single Donation
+    getDonation: builder.query({
+      query: (id) => ({
+        url: `/donations/${id}`,
         method: "GET",
       }),
       providesTags: ["donation"],
@@ -52,6 +62,7 @@ export const baseApi = createApi({
 
 export const {
   useGetDonationsQuery,
+  useGetDonationQuery,
   useAddDonationsMutation,
   useDeleteDonationsMutation,
   useUpdateDonationsMutation,

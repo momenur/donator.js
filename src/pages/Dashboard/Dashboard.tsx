@@ -3,7 +3,7 @@ import PieGraph from "./PieGraph";
 
 const Dashboard = () => {
   return (
-    <section className="w-full">
+    <section className="w-full ps-10">
       <div className="flex items-center justify-center -mt-28 md:-mt-20">
         <Title title="Dashboard" />
       </div>

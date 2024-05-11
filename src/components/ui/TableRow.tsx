@@ -44,7 +44,7 @@ const TableRow = ({ title, category, amount, id }: TDonationProps) => {
       <h4 className="flex-1 truncate">{category}</h4>
       <h4 className="flex-1 truncate">{amount}</h4>
       <div className="flex flex-1 gap-6">
-        <Link to={`/editDonation/${id}`}>
+        <Link to={`edit-donation/${id}`}>
           <Button className="bg-green-500">
             <FaEdit />
           </Button>
