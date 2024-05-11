@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useUpdateDonationsMutation } from "@/redux/api/api";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 type TFormInput = {
   image: string;
@@ -15,7 +15,6 @@ type TFormInput = {
 };
 
 const EditDonation = () => {
-  const navigate = useNavigate();
   const currentUrl = window.location.href;
   const urlObject = new URL(currentUrl);
   const pathname = urlObject.pathname;
@@ -23,8 +22,7 @@ const EditDonation = () => {
   const lastId = parts[parts.length - 1];
   console.log(lastId);
 
-  const [updateDonation, { data, isLoading, isSuccess }] =
-    useUpdateDonationsMutation();
+  const [updateDonation, { isSuccess }] = useUpdateDonationsMutation();
   const {
     register,
     handleSubmit,
@@ -37,9 +35,19 @@ const EditDonation = () => {
       data,
     };
     console.log(updateData);
-    const res = await updateDonation(updateData);
+    await updateDonation(updateData);
     location.reload();
   };
+
+  if (isSuccess) {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Your Donation Post is Added",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  }
 
   return (
     <Container>
