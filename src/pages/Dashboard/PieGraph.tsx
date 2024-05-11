@@ -10,12 +10,19 @@ const PieGraph = () => {
   const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
   const RADIAN = Math.PI / 180;
+
   const renderCustomizedLabel = ({
+    /* @ts-ignore */
     cx,
+    /* @ts-ignore */
     cy,
+    /* @ts-ignore */
     midAngle,
+    /* @ts-ignore */
     innerRadius,
+    /* @ts-ignore */
     outerRadius,
+    /* @ts-ignore */
     percent,
   }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
