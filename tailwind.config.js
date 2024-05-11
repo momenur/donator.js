@@ -75,6 +75,7 @@ module.exports = {
         "primary-gradient": "linear-gradient(180deg, #EF6524, #0000)",
         "secondary-gradient": "linear-gradient(45deg, #EF6524, #9A3412)",
         "banner-gradient": "url('src/assets/images/banner.jpg')",
+        "login-gradient": "url('src/assets/images/loginBG.jpg')",
       },
       textColor: {
         "color-text": "#EF6524",

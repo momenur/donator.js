@@ -7,7 +7,7 @@ const Dashboard = () => {
       <div className="flex items-center justify-center -mt-28 md:-mt-20">
         <Title title="Dashboard" />
       </div>
-      <div className="flex flex-col w-full gap-4">
+      <div className="flex flex-col w-full gap-4 md:flex-row">
         <PieGraph />
 
         <div className="w-full ">

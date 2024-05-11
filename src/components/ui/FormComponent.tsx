@@ -12,6 +12,7 @@ type TFormInput = {
 
 const FormComponent = () => {
   const [addDonation, { data, isLoading }] = useAddDonationsMutation();
+  console.log(data, isLoading);
   const {
     register,
     handleSubmit,
@@ -26,8 +27,11 @@ const FormComponent = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="px-10 py-16 bg-gray-100 border"
+      className="px-10 py-16 rounded-lg bg-gray-50"
     >
+      <h1 className="mb-16 text-2xl text-center">
+        Please full fill all requirement.
+      </h1>
       <div className="flex flex-col gap-6">
         <div className="flex w-full gap-10">
           <div className="w-full">
@@ -128,7 +132,7 @@ const FormComponent = () => {
 
           <Button
             type="submit"
-            className="px-6 py-3 rounded-full bg-secondary-gradient"
+            className="w-1/2 px-6 py-3 rounded-full bg-secondary-gradient"
           >
             Donate Now
           </Button>

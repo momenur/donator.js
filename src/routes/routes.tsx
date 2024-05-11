@@ -3,6 +3,8 @@ import DashboardLayout from "@/components/layout/DashboardLayout";
 import AllDonations from "@/pages/Dashboard/AllDonations";
 import CreateDonation from "@/pages/Dashboard/CreateDonation";
 import Dashboard from "@/pages/Dashboard/Dashboard";
+import EditDonation from "@/pages/Dashboard/EditDonation";
+import DonationDetail from "@/pages/Donations/DonationDetail";
 import Donations from "@/pages/Donations/Donations";
 import Home from "@/pages/Home/Home";
 import Login from "@/pages/Login/Login";
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "donations",
         element: <Donations />,
+      },
+      {
+        path: "donations/:id",
+        element: <DonationDetail />,
       },
       {
         path: "login",
@@ -43,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "create-donation",
         element: <CreateDonation />,
+      },
+      {
+        path: "editDonation/:id",
+        element: <EditDonation />,
       },
     ],
   },

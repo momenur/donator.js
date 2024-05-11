@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "./button";
+import { Link } from "react-router-dom";
 type TDonation = {
-  id: string;
+  _id: string;
   title: string;
   image: string;
   category: string;
@@ -32,9 +33,11 @@ const Card: React.FC<TDonationProps> = ({ donation }) => {
         <p className="text-justify text-gray-500 truncate max-h-[100px] text-wrap">
           {donation.description}
         </p>
-        <Button className=" max-w-[200px] mt-8 text-xl rounded-full bg-secondary-gradient">
-          View Detail
-        </Button>
+        <Link to={`/donations/${donation._id}`}>
+          <Button className=" max-w-[200px] mt-8 text-xl rounded-full bg-secondary-gradient">
+            View Detail
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -13,6 +13,18 @@ export const baseApi = createApi({
       providesTags: ["donation"],
     }),
 
+    updateDonations: builder.mutation({
+      query: (data) => {
+        console.log("From Redux", data);
+        return {
+          url: `/donations/${data.id}`,
+          method: "PUT",
+          body: data.data,
+        };
+      },
+      invalidatesTags: ["donation"],
+    }),
+
     addDonations: builder.mutation({
       query: (data) => {
         console.log("From Redux", data);
@@ -24,7 +36,23 @@ export const baseApi = createApi({
       },
       invalidatesTags: ["donation"],
     }),
+
+    deleteDonations: builder.mutation({
+      query: (id) => {
+        console.log("From Redux", id);
+        return {
+          url: `/donations/${id}`,
+          method: "DELETE",
+        };
+      },
+      invalidatesTags: ["donation"],
+    }),
   }),
 });
 
-export const { useGetDonationsQuery, useAddDonationsMutation } = baseApi;
+export const {
+  useGetDonationsQuery,
+  useAddDonationsMutation,
+  useDeleteDonationsMutation,
+  useUpdateDonationsMutation,
+} = baseApi;

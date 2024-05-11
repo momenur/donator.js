@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 const DashboardLayout = () => {
   return (
     <Container>
-      <div className="flex">
+      <div className="flex mx-auto">
         <Sidebar />
         <Outlet />
       </div>

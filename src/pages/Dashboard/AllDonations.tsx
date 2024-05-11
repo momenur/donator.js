@@ -29,6 +29,7 @@ const AllDonations = () => {
         <div>
           {donations?.map((item) => (
             <TableRow
+              id={item._id}
               title={item.title}
               category={item.category}
               amount={item.amount}
