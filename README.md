@@ -13,3 +13,25 @@ This is a Donation website. User can visit home page, all donations page and als
 - Redux
 - RTK Query
 - React Router DOM
+
+## **Live Links:**
+
+- Client-Site:
+- Server-Site: https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app
+
+## Installation:
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the Project Locally using `npm run dev`.
+
+## Dependencies:
+
+- React + TypeScript + Tailwind CSS
+- Redux
+- React hook form
+- shadCn
+- Sweet Alert2
+- recharts
+- react icons
+- react-router-dom
